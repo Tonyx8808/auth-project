@@ -11,5 +11,14 @@ const initialState = {
  //creiamo uno "slice" di redux chiamato user
  // uno slice è una sezione dello stato globale dell app, con le sue regole per modificarlo
 const userSlice = createSlice({
+     name: 'user',
+     initialState,
+     reducers: {
+          setUser: (state, action) => {
+               const { firstname, lastname, email, password } = action.payload;
+               state.name = name || "";
+               
 
+          }
+     }
 })
